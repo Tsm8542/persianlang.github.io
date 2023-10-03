@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persian</title>
+</head>
+<script src="script.js"></script>
+<style>
+    html{
+        background-color: black;
+        color: aqua;
+    }
+    .menu{
+        font-size: x-large;
+        text-align: center;
+    }
+    .standard,.page_range{
+        display: inline-block;
+    }
+    iframe{
+        width: 100%;
+        height: 600px;
+        border: none;
+        margin-top: 2px;
+    }
+    select{
+        margin: 2px;
+        text-align: center;
+        background-color: black;
+        color: cyan;
+        font-size: x-large;
+        border-radius: 10px;
+        border: 3px solid red;
+    }
+    select:focus{
+        border: 1px solid yellow;
+    }
+    .download{
+        display: none;
+        color: black;
+        padding: 1%;
+        margin: 2%;
+        border: 3px solid blue;
+        border-radius: 10px;
+    }
+    .download a{
+        text-decoration: none;
+        font-size: x-large;
+        color: white;
+    }
+    @media only screen and (max-width: 385px) {
+        .standard,.page_range{
+            display: block;
+        }
+        select{
+            width: 90%;
+        }
+        iframe{
+            width: 100%;
+            height: 775px;
+        }
+    }
+</style>
+<body>
+    <div class="menu">
+        <div class="standard">
+            <!--label for="branch">Branch:</label-->
+            <select id="standard" onchange="x()">
+                <option value="std8">Std 8</option>
+                <option value="std9">Std 9</option>
+                <option value="std10">Std 10</option>
+                <option value="std11">Std 11</option>
+                <option value="std12">Std 12</option>
+                <option value="download">Downloads</option>
+            </select>
+        </div>
+        <div class="page_range">
+            <!--label for="topic">Topic:</label-->
+            <select id="page_range" onchange="z()">
+                <option value="std_11_pr_1-30">1-30</option>
+                <option value="std_11_pr_31-60">31-60</option>
+                <option value="std_11_pr_61-90">61-90</option>
+                <option value="all8">All</option>
+            </select>
+        </div>
+    </div>
+    <iframe src="Persian Std 8/pr_1-30.html" id="frame"></iframe>
+    <div class="download">
+        <header style="text-align: center;color: red;">
+            <h1>Download the textbooks in PDF format:</h1>
+        </header>
+        <h2 style="color: lime;">Persian Textbooks (Standard-wise):</h2>
+        <ol style="font-size: x-large; color: lime;">
+            <li>
+                <a href="Downloads/Persian Std 8.pdf" download="Persian Std 8" title="Persian Std 8">Download Persian Std 8 (.pdf)</a>
+            </li>
+        </ol>
+        <h2 style="color: lime;">Persian (Baargay-e-farsi) Textbooks:</h2>
+        <ol style="font-size: x-large; color: lime;">
+            <li>
+                <a href="Downloads/Persian (Baargay-e-farsi) Std 9.pdf" download="Persian (Baargay-e-farsi) Std 9" title="Persian (Baargay-e-farsi) Std 9">Download Persian (Baargay-e-farsi) Std 9 (.pdf)</a>
+            </li>
+            <li>
+                <a href="Downloads/Persian (Baargay-e-farsi) Std 10.pdf" download="Persian (Baargay-e-farsi) Std 10" title="Persian (Baargay-e-farsi) Std 10">Download Persian (Baargay-e-farsi) Std 10 (.pdf)</a>
+            </li>
+        </ol>
+        <h2 style="color: lime;">Gul-Hay-Farsi (Persian) Textbooks:</h2>
+        <ol style="font-size: x-large; color: lime;">
+            <li>
+                <a href="Downloads/Gul-Hay-Farsi (Persian) Std 11.pdf" download="Gul-Hay-Farsi (Persian) Std 11" title="Gul-Hay-Farsi (Persian) Std 11">Download Gul-Hay-Farsi (Persian) Std 11 (.pdf)</a>
+            </li>
+            <li>
+                <a href="Downloads/Gul-Hay-Farsi (Persian) Std 12.pdf" download="Gul-Hay-Farsi (Persian) Std 12" title="Gul-Hay-Farsi (Persian) Std 12">Download Gul-Hay-Farsi (Persian) Std 12 (.pdf)</a>
+            </li>
+        </ol>
+        <h2 style="color: lime;">All Textbooks:</h2>
+        <ol style="font-size: x-large; color: lime;">
+            <li>
+                <a href="Downloads/Persian.zip" download="Persian">Download Persian Language - All .pdf in one (.zip)</a>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
